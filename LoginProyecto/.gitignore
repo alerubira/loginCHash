@@ -1,0 +1,24 @@
+# Archivos y carpetas de compilación
+bin/
+obj/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de configuración local
+*.vs/
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Archivos de base de datos locales
+*.db
+
+# Archivos de sistema
+Thumbs.db
+.DS_Store
