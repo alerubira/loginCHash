@@ -42,23 +42,24 @@ namespace LoginProyecto.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContext _context;// Contexto para acceder a la base de datos
 
         public LoginController(AppDbContext context)
         {
-            _context = context;
+            _context = context; // Se inyecta el contexto por dependencia
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View();// Muestra el formulario de login
         }
 
         [HttpPost]
         public IActionResult Index(string usuario, string clave)
         {
-            var user = _context.Logins.FirstOrDefault(u => u.Usuario == usuario && u.Clave == clave);
+             // Busca un usuario en la base de datos con el nombre y contraseña recibidos
+            var user = _context.Usuarios.FirstOrDefault(u => u.NombreUsuario == usuario && u.Contraseña == clave);
 
             if (user != null)
             {

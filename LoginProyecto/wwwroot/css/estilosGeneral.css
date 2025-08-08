@@ -1,0 +1,5 @@
+.divForm{
+  display: flex;
+  justify-content: flex-end; /* Alinea a la derecha */
+  margin-bottom: 10px;
+}

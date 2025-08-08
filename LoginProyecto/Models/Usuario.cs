@@ -8,9 +8,9 @@ namespace LoginProyecto.Models
         public int Id { get; set; }
 
         [Required]
-        public string NombreUsuario { get; set; } = string.Empty;
+        public required string NombreUsuario { get; set; } 
 
         [Required]
-        public string Contraseña { get; set; } = string.Empty;
+        public required string Contraseña { get; set; } 
     }
 }
